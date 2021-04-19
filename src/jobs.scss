@@ -1,0 +1,26 @@
+.jobs {
+    .search {
+        background-color: #ECF9FF;
+        padding: 20px 0;
+    }
+
+    .job-posting, .job-posting-full {
+        padding: 2.5vh 40px;
+        margin: 4vh 5vw;
+    }
+
+    .job-posting {
+        background: rgba(250, 250, 250, 0.85);
+        border-radius: 5px;
+        border: 1px solid black;
+        box-shadow: 5px 5px 5px lightgray;
+    }
+
+    .job-posting-role {
+        font-size: larger;
+    }
+
+    #description {
+        padding: 1vh 0;
+    }
+}
