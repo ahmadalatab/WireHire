@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+
+.nav-item {
+  margin: 30px;
+  size: 5rem;
+}
+
+.nav-link {
+  color: green;
+}
