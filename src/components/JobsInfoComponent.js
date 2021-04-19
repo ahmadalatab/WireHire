@@ -1,26 +1,28 @@
 import React from 'react';
-import JobPosting from './JobPostingComponent';
-import Search from './SearchComponent';
 import { Postings } from '../shared/Postings';
 import '../jobs.scss';
+import FullJobPosting from './FullPostingComponent';
+import Apply from './ApplyComponent';
 
-const Jobs = () => {
+const JobsInfo = (props) => {
+
+    const { match: { params } } = props;
 
     return (
         <div className="jobs container">
-            <Search />
-            {Postings.map((job) => (
-                <JobPosting 
+            {Postings.filter(job => job.id === parseInt(params.id)).map(job =>
+                <FullJobPosting
                     key={job.id}
                     role={job.role}
                     description={job.description}
                     date={job.date}
-                    location={job.location}
                     id={job.id}
                 />
-            ))}
+            )}
+            <hr />
+            <Apply />
         </div>
     );
 }
 
-export default Jobs;
+export default JobsInfo;
