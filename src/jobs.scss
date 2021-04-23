@@ -2,6 +2,24 @@
     .search {
         background-color: #ECF9FF;
         padding: 20px 0;
+
+        .custom-radio input {
+            opacity: 0;
+            position: fixed;
+            width: 0;
+        }
+        .custom-radio label {
+            cursor: pointer;
+            overflow: hidden;
+            background-color: #dafdfa;
+            padding: 0.3em 1.2em;
+            border: 1px solid lightgray;
+            border-radius: 10px;
+        }
+        input:checked + label, label:hover {
+            background: #58abad;
+            color: white;
+        }
     }
 
     .job-posting, .job-posting-full {

@@ -37,8 +37,13 @@
   }
 }
 
+.navbar {
+  background-color: #61dafb;
+  margin-bottom: 3em;
+}
+
 .nav-item {
-  margin: 30px;
+  margin: 0 30px;
   size: 5rem;
 }
 
