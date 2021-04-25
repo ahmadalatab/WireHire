@@ -31,14 +31,14 @@ class Header extends Component {
     render() {
         return (
             <React.Fragment>
-                <Navbar sticky="top" expand="md">
+                <Navbar sticky="top" className="navbar" expand="md" light>
                     <div className="container">
                         <NavbarBrand className="mr-auto" href="/">WireHire</NavbarBrand>
                         <NavbarToggler onClick={this.toggleNav} />
                         <Collapse isOpen={this.state.isNavOpen} navbar>
                             <Nav navbar className="mr-auto">
                                 <NavItem className="nav-item">
-                                    <NavLink className="nav-link" to="/home">
+                                    <NavLink className="nav-link" to="/">
                                         <i className="fa fa-home fa-lg" /> Home
                                         </NavLink>
                                 </NavItem>
@@ -74,7 +74,7 @@ class Header extends Component {
                                 <Input type="password" id="password" name="password" placeholder="password" innerRef={input => this.password = input} />
                             </FormGroup>
                                 <Button className="modalLogin" type="submit" value="submit" color="info">Login</Button>
-                                <p class="message">Not registered? <a href="#">Create an account</a></p>
+                                <p class="message">Not registered? <a href="/">Create an account</a></p>
                         </Form>
                     </ModalBody>
                 </Modal>             

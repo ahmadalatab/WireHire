@@ -6,7 +6,9 @@ export const User =
         lastName: "Alatab",
         email: "ahmadatab86@gmail.com",
         phoneNum: '949-123-4567',
-        location: 'Irvine',
+        location: 'Irvine'
+    },
+    {
         workExperience: [{
             id: 0,
             title: 'Software Engineer 1',
@@ -23,6 +25,8 @@ export const User =
             endDate: '12-12-2000',
             responsibilities: ''
         }],
+    },
+    {
         education: [{
             id: 0,
             school: 'NuCamp',
@@ -41,6 +45,8 @@ export const User =
             endYear: '07-01-2000',
             gpa: '3.9'
         }],
+    },
+    {
         skills: ["HTML", "CSS", "React", "Javascript"],
         certification: [{
             id: 0,

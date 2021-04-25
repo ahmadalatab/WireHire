@@ -1,0 +1,59 @@
+.profile {
+
+    .experiencesSection {
+        background-color: #ECF9FF;
+        margin: 1vh 10em;
+        border-radius: 5px;
+    }
+
+    @media only screen and (max-width: 600px) {
+        .experiencesSection {
+            margin: 1vh;
+        }
+    }
+
+    .experience {
+        padding: 0 4em 0;
+    }
+
+    .experience:first-of-type {
+        padding-top: 1vh;
+    }
+
+    .experience:last-child {
+        padding-bottom: 0.5vh;
+    }
+
+    .experience:not(:last-child):after {
+        content: "";
+        display: block;
+        margin: 0 auto;
+        width: 75%;
+        border-bottom: 1px solid gray;
+    }
+
+    .header {
+
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-column-gap: 5px;
+        justify-items: center;
+
+        h2:first-child { 
+            grid-column-start: 2; 
+        }
+
+        h2:last-child { 
+            margin-left:auto; 
+        }
+
+        h2 {
+            align-self: center;
+        }
+
+        i {
+            font-size: 24px;
+        }
+    }
+
+}

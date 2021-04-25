@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import { Row, Col } from 'reactstrap';
-import Truncate from 'react-truncate';
 
 const JobPosting = (props) => {
     return (
@@ -14,9 +13,9 @@ const JobPosting = (props) => {
             </Row>
             <Row>
                 <div id="description">
-                <Truncate lines={3}>
+                {/* <Truncate lines={3}> */}
                     {props.description}
-                </Truncate>
+                {/* </Truncate> */}
                 </div>
             </Row>
             <Row>

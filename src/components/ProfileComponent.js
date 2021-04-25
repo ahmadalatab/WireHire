@@ -1,13 +1,18 @@
-import React, {Component, useState} from 'react';
-import {User} from '../shared/UserProfile';
-import {} from 'reactstrap';
+import React from 'react';
+import Experience from './ExperienceComponent';
+import '../profile.scss';
 
 const Profile = () => {
-    const [userDisplay, setUserDisplay] = useState(User);
-    const display = JSON.stringify(userDisplay)
+
     return(
-        <div>
-            console.log({display})
+        <div className="profile">
+            <div className="experiencesSection">
+                <div className="align-items-center px-5 header">
+                    <h2>Experience</h2>
+                    <h2><i className="fa fa-pencil"></i></h2>
+                </div>
+                <Experience />
+            </div>
         </div>
         
     );
