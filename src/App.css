@@ -50,3 +50,9 @@
 .nav-link {
   color: green;
 }
+
+.modalLogin {
+  margin: auto;
+  width: 100%;
+  color:#61dafb;
+}
