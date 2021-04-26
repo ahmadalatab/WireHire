@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Nav, Navbar, NavbarBrand, NavbarToggler, Collapse, NavItem, Button, Modal, ModalHeader, ModalBody, Form, FormGroup, Input, Label} from 'reactstrap';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
+import SignUp from './SignUpComponent';
 
 class Header extends Component {
 
@@ -74,7 +75,7 @@ class Header extends Component {
                                 <Input type="password" id="password" name="password" placeholder="password" innerRef={input => this.password = input} />
                             </FormGroup>
                                 <Button className="modalLogin" type="submit" value="submit" color="info">Login</Button>
-                                <p class="message">Not registered? <a href="/">Create an account</a></p>
+                                <p class="message">Not registered? <Link to="/signup" onClick={this.toggleModal}>Create an account</Link></p>
                         </Form>
                     </ModalBody>
                 </Modal>             

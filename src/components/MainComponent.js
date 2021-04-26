@@ -6,6 +6,7 @@ import Header from './HeaderComponent';
 import Footer from './FooterComponent';
 import Profile from './ProfileComponent';
 import JobsInfo from './JobsInfoComponent';
+import SignUp from './SignUpComponent';
 
 class Main extends Component {
 
@@ -19,6 +20,7 @@ class Main extends Component {
                     <Route exact path='/jobs' component={Jobs} />
                     <Route path="/jobs/:id" component={JobsInfo} />
                     <Route path="/profile" component={Profile} />
+                    <Route path="/signup" exact component={SignUp} />
                 </Switch>
                 <Footer />
             </>
