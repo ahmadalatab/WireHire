@@ -25,7 +25,7 @@ class SignUp extends Component {
                     </div>
                 </div>
             </FormGroup>
-            <Button type="submit" value="submit" color="info">Sign Up</Button>
+            <Button type="submit" value="submit" className="signup-button">Sign Up</Button>
             <p className="disclaimer">By submitting your information, you consent to our sharing of your information with our clients and affiliates to support you in finding a job and to send you emails and text messages about jobs you may be interested in and other promotional emails. Please refer to the terms of our Applicant Privacy Policy for more information.</p>
         </Form>
         )

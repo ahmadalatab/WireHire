@@ -1,14 +1,36 @@
 import React, {Component} from 'react';
-import homeimage from '../images/job-banner.jpg';
+import Search from './SearchComponent';
+import '../jobs.scss';
+
+import {Card, CardBody, CardImg, CardMedia, CardText, CardTitle, CardLink} from 'reactstrap';
 
 class Home extends Component {
     render(){
         return(
             <React.Fragment>
-                <div className="container-fluid no-padding">
-                    <img id="" src={homeimage} alt="job search" width="100%" />
-                    <div className="top-right image-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae diam non sapien commodo finibus. Suspendisse ac ornare ligula, sit amet euismod augue. Donec euismod elit ut bibendum pretium. Pellentesque luctus odio nec enim iaculis laoreet. Curabitur dictum dolor sit amet accumsan tincidunt. Etiam in nisl enim. Nam tristique maximus augue et consequat. Vestibulum ac urna libero. Vestibulum dignissim eget enim at gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                <style>
+                    @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap');
+                </style>
+                <div className="container-fluid no-padding backgroundimage">
+                    <div className="row">
+                        <div className="col-md-3 top-left">
+                            <div>Dream Jobs. Top Talent. All in One Place.</div>
+                        </div>
+                    </div>
                 </div>
+                <div className="container">
+                    <Card style={{ width: '18rem'}}>
+                        <CardImg variant="top" src="../images/salaryguide.jpg"/>
+                        <CardBody>
+                            <CardTitle style={{ fontSize: "larger"}}>2021 Salary Guide</CardTitle>
+                            <CardText>
+                                Get current compensation data and learn about emerging employment trends to help you hire new talent or land your next job.
+                            </CardText>
+                            <CardLink href="https://www.roberthalf.com/salary-guide">Salary Guide</CardLink>
+                        </CardBody>
+                    </Card>
+                </div>
+
             </React.Fragment>
         );
     }

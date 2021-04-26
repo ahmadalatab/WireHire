@@ -34,28 +34,28 @@ class Header extends Component {
             <React.Fragment>
                 <Navbar sticky="top" className="navbar" expand="md" light>
                     <div className="container">
-                        <NavbarBrand className="mr-auto" href="/">WireHire</NavbarBrand>
+                        <NavbarBrand className="mr-auto nav-item-color" href="/">WireHire</NavbarBrand>
                         <NavbarToggler onClick={this.toggleNav} />
                         <Collapse isOpen={this.state.isNavOpen} navbar>
                             <Nav navbar className="mr-auto">
                                 <NavItem className="nav-item">
-                                    <NavLink className="nav-link" to="/">
+                                    <NavLink className="nav-link nav-item-color" to="/">
                                         <i className="fa fa-home fa-lg" /> Home
                                         </NavLink>
                                 </NavItem>
                                 <NavItem>
-                                    <NavLink className="nav-link" to="/profile">
+                                    <NavLink className="nav-link nav-item-color" to="/profile">
                                         <i className="fa fa-user" /> Profile
                                     </NavLink>
                                 </NavItem>
                                 <NavItem>
-                                    <NavLink className="nav-link" to="/jobs">
+                                    <NavLink className="nav-link nav-item-color" to="/jobs">
                                         <i className="fa fa-briefcase"/> Jobs
                                     </NavLink>
                                 </NavItem>
                             </Nav>
                             <span>                         
-                                <Button className="navbar-text float-sm-right" variant="outline-success" onClick={this.toggleModal}>
+                                <Button className="navbar-text float-sm-right nav-item-color" variant="outline-success" onClick={this.toggleModal}>
                                     <i className="fa fa-sign-in fa-lg" />Login
                                 </Button>
                             </span>
