@@ -39,7 +39,7 @@
 
 .navbar {
   background-color: #61dafb;
-  margin-bottom: 3em;
+  /*margin-bottom: 3em;*/
 }
 
 .nav-item {
@@ -55,4 +55,68 @@
   margin: auto;
   width: 100%;
   color:#61dafb;
+}
+
+.signup {
+  max-width: 600px;
+  border-radius: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+ .push {
+  height: 50px;
+ }
+ 
+ .disclaimer {
+   margin-top: 25px;
+   font-size: small;
+   margin-left: auto;
+   margin-right: auto;
+   max-width: 600px;
+ }
+
+ .resume {
+   font-size: medium;
+   position: relative;
+ }
+
+ .no-padding {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.top-left {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
+
+.top-right {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+  color: red
+}
+
+.bottom-right {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.image-text {
+  z-index: 100;
+  position: absolute;
+  color: red;
+  font-size: 24px;
+  font-weight: bold;
+  left: 150px;
+  top: 350px;
 }

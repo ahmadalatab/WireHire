@@ -11,7 +11,6 @@ import SignUp from './SignUpComponent';
 class Main extends Component {
 
     render() {
-
         return (
             <>
                 <Header />              
