@@ -18,6 +18,9 @@ class Home extends Component {
                         </div>
                     </div>
                 </div>
+                <div className="jobs">
+                    <Search />
+                </div>
                 <div className="container">
                     <Card style={{ width: '18rem'}}>
                         <CardImg variant="top" src="../images/salaryguide.jpg"/>
