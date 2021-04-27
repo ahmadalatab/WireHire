@@ -1,50 +1,71 @@
 .profile {
 
-    .experiencesSection {
-        background-color: #ECF9FF;
-        margin: 1vh 10em;
+    margin-top: 3em;
+
+    .experiencesSection, .educationSection, .aboutSection {
+        background-color: #EBF6FF;
+        margin: 1vh 15vw;
         border-radius: 5px;
+        margin-bottom: 2em;
+        border: 1px solid lightgray;
+    }
+
+    .aboutSection {
+        margin-bottom: 2em;
+        border-radius: 0;
+        background-color: #003D7A;
+        color: white;
     }
 
     @media only screen and (max-width: 600px) {
-        .experiencesSection {
+        .experiencesSection, .educationSection, .aboutSection {
             margin: 1vh;
+        }
+
+        .experience {
+            padding-left: 4vw;
+            padding-right: 4vw;
         }
     }
 
     .experience {
-        padding: 0 4em 0;
-    }
+        padding: 0 3em 0;
 
-    .experience:first-of-type {
-        padding-top: 1vh;
-    }
+        .row div {
+            padding-left: 0 !important;
+        }
 
-    .experience:last-child {
-        padding-bottom: 0.5vh;
-    }
+        &:first-of-type {
+            padding-top: 1vh;
+        }
 
-    .experience:not(:last-child):after {
-        content: "";
-        display: block;
-        margin: 0 auto;
-        width: 75%;
-        border-bottom: 1px solid gray;
+        &:last-child {
+            padding-bottom: 0.5vh;
+        }
+
+        &:not(:last-child):after {
+            content: "";
+            display: block;
+            margin: 0 auto;
+            width: 85%;
+            border-bottom: 1px solid gray;
+        }
     }
 
     .header {
 
         display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-template-columns: 15% auto 15%;
         grid-column-gap: 5px;
         justify-items: center;
 
-        h2:first-child { 
+        h2:first-child, div:first-child { 
             grid-column-start: 2; 
         }
 
-        h2:last-child { 
-            margin-left:auto; 
+        h2:last-child, div:last-child { 
+            margin-left: auto; 
+            margin-bottom: auto;
         }
 
         h2 {

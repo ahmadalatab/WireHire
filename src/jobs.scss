@@ -1,4 +1,7 @@
 .jobs {
+
+    margin-top: 3em;
+
     .search {
         background-color: #ECF9FF;
         padding: 20px 0;
@@ -15,13 +18,13 @@
         .custom-radio label {
             cursor: pointer;
             overflow: hidden;
-            background-color: #dafdfa;
+            background-color: #9AD3FE;
             padding: 0.3em 1.2em;
             border: 1px solid lightgray;
             border-radius: 10px;
         }
         input:checked + label, input + label:hover {
-            background: #58abad;
+            background: #478EFF;
             color: white;
         }
     }
@@ -36,6 +39,10 @@
         border-radius: 5px;
         border: 1px solid black;
         box-shadow: 5px 5px 5px lightgray;
+    }
+
+    a {
+        color: #007bff;
     }
 
     .job-posting-role {
