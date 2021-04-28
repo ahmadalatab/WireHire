@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Nav, Navbar, NavbarBrand, NavbarToggler, Collapse, NavItem, Button, Modal, ModalHeader, ModalBody, Form, FormGroup, Input, Label} from 'reactstrap';
 import { NavLink, Link } from 'react-router-dom';
+import { Control, Errors } from 'react-redux-form';
 import SignUp from './SignUpComponent';
 
 class Header extends Component {

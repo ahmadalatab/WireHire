@@ -129,6 +129,7 @@ a:hover {
   background-repeat: no-repeat;
   position: relative;
   border: 2px solid #001f3f ;
+  margin-bottom: 20px;
 }
 
 .top-left {
@@ -148,4 +149,17 @@ a:hover {
 .modal-style {
   background-color:#001f3f ;
   color: white
+}
+
+#show-link a:visited{
+  color: #001f3f;
+}
+
+.home-carousel {
+  border: 2px solid #001f3f ;
+  margin-bottom: 20px;
+}
+
+.carousel-indicators li {
+  background-color: black; 
 }
