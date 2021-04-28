@@ -51,7 +51,7 @@ const Jobs = () => {
         let sortBy = e.target.value;
         let sortedList = [...jobDisplay];
         if (sortBy === 'date') {
-            sortedList.sort((a, b) => new Date(a.date) - new Date(b.date));
+            sortedList.sort((a, b) => new Date(a.date) - new Date(b.date)).reverse();
             setJobDisplay(sortedList);
         }
         else {
