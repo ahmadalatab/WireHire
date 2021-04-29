@@ -64,8 +64,8 @@ class Header extends Component {
                     </div>
                 </Navbar>
                 <Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
-                    <ModalHeader toggle={this.toggleModal} className="modal-style">Login</ModalHeader>
-                    <ModalBody className="modal-style">
+                    <ModalHeader toggle={this.toggleModal}>Login</ModalHeader>
+                    <ModalBody>
                         <Form>
                             <FormGroup>
                                 <Label htmlFor="username">Username</Label>
