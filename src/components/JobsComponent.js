@@ -10,6 +10,7 @@ const Jobs = () => {
     const [locationInput, setLocationInput] = useState('');
     const [jobDisplay, setJobDisplay] = useState(Postings);
     const [originalList, setOrignalList] = useState(jobDisplay);
+    const [emptyJobMsg, setEmptyJobMsg] = useState("");
 
     const searchKeywordUpdated = (e) => {
         const searchQuery = e.target.value;
@@ -43,8 +44,14 @@ const Jobs = () => {
                 )
             }
         });
-        setJobDisplay(filterDisplay ? filterDisplay : Postings);
-        setOrignalList(filterDisplay ? filterDisplay : Postings);
+        if (filterDisplay.length) {
+            setJobDisplay(filterDisplay);
+            setEmptyJobMsg("");
+        }
+        else {
+            setEmptyJobMsg("Sorry, no jobs match your search.");
+        }
+        setOrignalList(filterDisplay);
     }
 
     const handleSort = (e) => {
@@ -61,7 +68,7 @@ const Jobs = () => {
 
     return (
         <div className="jobs container">
-            <Search 
+            <Search
                 keywordInput={keywordInput}
                 keywordInputChanged={(e) => searchKeywordUpdated(e)}
                 handleSearch={(e) => handleSearch(e)}
@@ -69,16 +76,20 @@ const Jobs = () => {
                 locationInputChanged={e => searchLocationUpdated(e)}
                 handleSort={e => handleSort(e)}
             />
-            {jobDisplay.map((job) => (
-                <JobPosting 
-                    key={job.id}
-                    role={job.role}
-                    description={job.description}
-                    date={job.date}
-                    location={job.location}
-                    id={job.id}
-                />
-            ))}
+            {!emptyJobMsg ?
+                jobDisplay.map((job) => (
+                    <JobPosting
+                        key={job.id}
+                        role={job.role}
+                        description={job.description}
+                        date={job.date}
+                        location={job.location}
+                        id={job.id}
+                    />
+                ))
+                :
+                <div>{emptyJobMsg}</div>
+            }
         </div>
     );
 }
