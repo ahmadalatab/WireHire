@@ -12,10 +12,8 @@ const JobPosting = (props) => {
                 <div className="job-posting-location">{props.location}</div>
             </Row>
             <Row>
-                <div id="description">
-                {/* <Truncate lines={3}> */}
+                <div id="description" className="truncate">
                     {props.description}
-                {/* </Truncate> */}
                 </div>
             </Row>
             <Row>
