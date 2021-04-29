@@ -2,7 +2,7 @@ import React from 'react';
 import { Postings } from '../shared/Postings';
 import '../jobs.scss';
 import FullJobPosting from './FullPostingComponent';
-import Apply from './ApplyComponent';
+//import Apply from './ApplyComponent';
 
 const JobsInfo = (props) => {
 
@@ -19,8 +19,6 @@ const JobsInfo = (props) => {
                     id={job.id}
                 />
             )}
-            <hr />
-            <Apply />
         </div>
     );
 }

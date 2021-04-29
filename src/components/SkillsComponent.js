@@ -18,7 +18,7 @@ const Skills = () => {
                     {skills.map((skills, idx) => {
                         if (Object.keys(skills).length !== 0) {
                             return (
-                                <h5 key={idx} className="m-2"><Badge color="secondary">{skills}</Badge></h5>
+                                <h4 key={idx} className="m-2"><Badge color="secondary">{skills}</Badge></h4>
                             )
                         }
                         else {
