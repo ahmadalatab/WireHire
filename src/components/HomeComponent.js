@@ -1,44 +1,44 @@
-import React, {Component} from 'react';
-import Search from './SearchComponent';
+import React from 'react';
 import '../jobs.scss';
-import {Row, Col} from 'reactstrap';
+import {Row, Col, Button} from 'reactstrap';
 import { Carousel } from "react-bootstrap";
 import image1 from '../images/salaryguide.jpg';
 import image2 from '../images/best-jobs-2021-badge-graphic.svg';
 import image3 from '../images/skills.jfif';
-import image4 from '../images/amazon.jfif';
-import image5 from '../images/google2.jfif';
-import image6 from '../images/microsoft.jfif';
-import image7 from '../images/intel.jfif';
+import image5 from '../images/google2.jpg';
+import image6 from '../images/microsoft2.jpg';
+import image7 from '../images/intel2.jpg';
+import image8 from '../images/amazon2.jpg';
 
 import {Card, CardBody, CardImg, CardMedia, CardText, CardTitle, CardLink} from 'reactstrap';
 
-class Home extends Component {
-    render(){
+
+const Home = () => {
         return(
             <React.Fragment>
                 <style>
                     @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap');
                 </style>
                 <div className="container-fluid no-padding backgroundimage">
-                    <div className="row">
-                        <div className="col-md-3 top-left">
-                            <div>Dream Jobs. Top Talent. All in One Place.</div>
+                    <div className="row h-100 align-items-center">
+                        <div className="col-md-6 top-content align-items-center">
+                            <div style={{ fontSize: 'xx-large' }} >Dream Jobs. Top Talent. All in One Place.</div>
+                            <br />
+                            <p style={{ fontSize: 'large' }}>The right IT Staffing & Managed Solutions partner is here and ready to transform the horizon with empowering new possibilities.</p>
+                            <br />
+                            <Button href="/jobs"> Find a Job </Button>
                         </div>
                     </div>
                 </div>
-                {/* <div className="jobs">
-                    <Search />
-                </div> */}
                 <div className="container">
-                    <h2>Top Employers </h2>
+                    <h2 className="home-employers">Top Employers </h2>
                     <Row>
                         <Col>
                             <Carousel className="home-carousel" >
                                 <Carousel.Item interval={5000}>
                                     <img
                                     className="d-block w-100"
-                                    src={image4}
+                                    src={image8}
                                     alt="Amazon"
                                     />
                                 <Carousel.Caption>
@@ -52,7 +52,7 @@ class Home extends Component {
                                     alt="Google"
                                     />
                                 <Carousel.Caption>
-                                <p>World's largest online marketplace, AI assistant provider, live-streaming platform and cloud computing platform </p>
+                                <p>Specializes in Internet-related services and products, which include online advertising technologies, a search engine, cloud computing, software, and hardware </p>
                                 </Carousel.Caption>
                                 </Carousel.Item>
                                 <Carousel.Item interval={5000}>
@@ -62,7 +62,7 @@ class Home extends Component {
                                     alt="Microsoft"
                                     />
                                 <Carousel.Caption>
-                                <p>World's largest online marketplace, AI assistant provider, live-streaming platform and cloud computing platform </p>
+                                <p>Develops, manufactures, licenses, supports, and sells computer software, consumer electronics, personal computers, and related services. </p>
                                 </Carousel.Caption>
                                 </Carousel.Item>
                                 <Carousel.Item interval={1000}>
@@ -72,7 +72,7 @@ class Home extends Component {
                                     alt="Intel"
                                     />
                                 <Carousel.Caption>
-                                <p>World's largest online marketplace, AI assistant provider, live-streaming platform and cloud computing platform </p>
+                                <p>Engages in the design, manufacture, and sale of computer products and technologies </p>
                                 </Carousel.Caption>
                                 </Carousel.Item>
                             </Carousel>
@@ -126,7 +126,7 @@ class Home extends Component {
 
             </React.Fragment>
         );
-    }
+    
 }
 
 export default Home;

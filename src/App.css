@@ -94,7 +94,7 @@
   padding-right: 0;
 }
 
-#footer {
+#footer  {
   background-color: #001f3f;
   margin-top: 1rem;
   padding: 1rem;
@@ -103,21 +103,14 @@
   left: 0;
   width: 100%;
   margin-top: auto;
+  
+}
+
+#footer a {
+  color: white;
 }
 
 .footer-items {
-  color: white;
-}
-
-a:link {
-  color: white;
-}
-
-a:visited {
-  color: white;
-}
-
-a:hover {
   color: white;
 }
 
@@ -132,10 +125,7 @@ a:hover {
   margin-bottom: 20px;
 }
 
-.top-left {
-  position: absolute;
-  top: 50px;
-  left: 16px;
+.top-content {
   font-family: 'Libre Baskerville', serif;
   font-size: larger;
 }
@@ -162,4 +152,12 @@ a:hover {
 
 .carousel-indicators li {
   background-color: black; 
+}
+
+.home-employers {
+  font-size: x-large;
+  font-family: 'Libre Baskerville', serif;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  text-decoration: underline;
 }
