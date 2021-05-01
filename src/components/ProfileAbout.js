@@ -13,6 +13,7 @@ const About = () => {
     const toggle = () => setModal(!modal);
 
     const handleChange = (e) => {
+        console.log(e);
         setInputs(prevState => ({ ...prevState, [e.target.name]: e.target.value }));
     }
 

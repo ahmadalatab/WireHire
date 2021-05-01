@@ -30,8 +30,8 @@ export const User =
             school: 'NuCamp',
             degree: 'FrontEnd',
             fieldofStudy: 'Software',
-            startYear: '01-01-2000',
-            endYear: '05-01-2000',
+            startDate: '01-01-2000',
+            endDate: '05-01-2000',
             gpa: '3.5'
         },
         {
@@ -39,8 +39,8 @@ export const User =
             school: 'CodeCademy',
             degree: 'Backend',
             fieldofStudy: 'Software',
-            startYear: '05-01-2000',
-            endYear: '07-01-2000',
+            startDate: '05-01-2000',
+            endDate: '07-01-2000',
             gpa: '3.9'
         }],
         skills: ["HTML", "CSS", "React", "Javascript"],

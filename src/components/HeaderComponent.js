@@ -55,9 +55,9 @@ class Header extends Component {
                                     </NavLink>
                                 </NavItem>
                             </Nav>
-                            <span>                         
+                            <span>
                                 <Button className="navbar-text float-sm-right nav-item-color" variant="outline-success" onClick={this.toggleModal}>
-                                    <i className="fa fa-sign-in fa-lg" />Login
+                                    <i className="fa fa-sign-in fa-lg" /> Login
                                 </Button>
                             </span>
                         </Collapse>

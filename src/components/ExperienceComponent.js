@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import { Row, Col } from 'reactstrap';
-import { FormGroup, Label, Input } from 'reactstrap';
 import '../profile.scss';
 import { User } from '../shared/UserProfile';
-import ProfileModal from './ProfileModal';
+import { ExperienceModal } from './ProfileModal';
 
 
 const Experience = () => {
@@ -26,46 +25,17 @@ const Experience = () => {
         alert(JSON.stringify(inputs));
     }
 
-    const ExperienceForm = (props) => {
-        return (
-            <>
-                <FormGroup>
-                    <Label htmlFor="company">Company</Label>
-                    <Input type="text" id="company" name="company" placeholder="Company" defaultValue={props.company} onChange={handleChange} />
-                </FormGroup>
-                <FormGroup>
-                    <Label htmlFor="title">Title</Label>
-                    <Input type="text" id="title" name="title" placeholder="Title" defaultValue={props.title} onChange={handleChange} />
-                </FormGroup>
-                <FormGroup>
-                    <Label htmlFor="date">Date</Label>
-                    <Input type="text" id="date" name="date" placeholder="date" defaultValue={props.startDate} onChange={handleChange} />
-                </FormGroup>
-                <FormGroup>
-                    <Label htmlFor="desc">Description</Label>
-                    <Input type="textarea" id="desc" name="desc" placeholder="Description" defaultValue={props.responsibilites} onChange={handleChange} />
-                </FormGroup>
-            </>
-        )
-    }
-
     return (
         <div className="experiencesSection">
             <div className="align-items-center px-sm-2 py-2 mb-2 header">
                 <h2>Experience</h2>
                 <h2><i className="fa fa-plus" onClick={toggleAddForm}></i></h2>
-                <ProfileModal
+                <ExperienceModal
                     isOpen={modal}
                     toggle={toggleAddForm}
+                    action="Add"
+                    handleChange={handleChange}
                     submit={handleSubmit}
-                    form={
-                        <ExperienceForm
-                            company={''}
-                            title={''}
-                            startDate={''}
-                            responsibilites={''}
-                        />
-                    }
                 />
             </div>
             {workExperiences.map((experience, idx) => {
@@ -84,17 +54,16 @@ const Experience = () => {
                             <Row className="mb-2 mx-0">
                                 {experience.responsibilites}
                             </Row>
-                            <ProfileModal
+                            <ExperienceModal
                                 isOpen={modalID === idx}
                                 toggle={toggleModal}
-                                form={
-                                    <ExperienceForm
-                                        company={experience.company}
-                                        title={experience.title}
-                                        startDate={experience.startDate}
-                                        responsibilites={experience.responsibilities}
-                                    />
-                                }
+                                action="Edit"
+                                company={experience.company}
+                                title={experience.title}
+                                startDate={experience.startDate}
+                                endDate={experience.endDate}
+                                responsibilites={experience.responsibilities}
+                                handleChange={handleChange}
                             />
                         </div>
                     )
