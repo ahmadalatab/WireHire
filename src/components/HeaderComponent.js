@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import { Nav, Navbar, NavbarBrand, NavbarToggler, Collapse, NavItem, Button, Modal, ModalHeader, ModalBody, Form, FormGroup, Input, Label} from 'reactstrap';
 import { NavLink, Link } from 'react-router-dom';
-import { Control, Errors } from 'react-redux-form';
-import SignUp from './SignUpComponent';
+import { CSSTransition } from 'react-transition-group';
 
 class Header extends Component {
 
@@ -31,6 +30,11 @@ class Header extends Component {
     }
 
     render() {
+        const modalStyles = {
+            overlay: {
+              backgroundColor: '#ffffff',
+            },
+          };
         return (
             <React.Fragment>
                 <Navbar sticky="top" className="navbar" expand="md" dark>
@@ -63,7 +67,12 @@ class Header extends Component {
                         </Collapse>
                     </div>
                 </Navbar>
-                <Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
+                <CSSTransition
+                    in={this.state.isModalOpen}
+                    timeout={300}
+                    classNames="dialog"
+                >
+                <Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal} style={modalStyles} contentLabel="modal" closeTimeoutMS={2000}>
                     <ModalHeader toggle={this.toggleModal}>Login</ModalHeader>
                     <ModalBody>
                         <Form>
@@ -79,7 +88,8 @@ class Header extends Component {
                                 <p class="message">Not registered? <Link to="/signup" onClick={this.toggleModal}>Create an account</Link></p>
                         </Form>
                     </ModalBody>
-                </Modal>             
+                </Modal>
+                </CSSTransition>             
             </React.Fragment>
         );
     }
