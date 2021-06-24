@@ -1,21 +1,30 @@
 const express = require('express');
+const Profile = require('../models/profile');
 const profileRouter = express.Router();
 
 profileRouter.route('/')
-    .all((req, res, next) => {
-        res.statusCode = 200;
-        res.setHeader('Content-Type', 'text/plain');
-        next();
-    })
     .get((req, res) => {
-        res.end('Get user profile information');
+        Profile.find()
+            .then(campsites => {
+                res.statusCode = 200;
+                res.setHeader('Content-Type', 'application/json');
+                res.json(campsites);
+            })
+            .catch(err => next(err));
     })
-    .post((req, res) => {
-        res.end('New user profile created');
-    })
+
+profileRouter.route('/:userId')
     .put((req, res) => {
-        res.statusCode = 403;
-        res.end('Profile information updated');
+        Profile
+            .findByIdAndUpdate(req.params.userId, {
+                $set: req.body
+            }, { new: true })
+            .then(user => {
+                res.statusCode = 200;
+                res.setHeader('Content-Type', 'application/json');
+                res.json(user);
+            })
+            .catch(err => next(err));
     })    
 
 module.exports = profileRouter; 
