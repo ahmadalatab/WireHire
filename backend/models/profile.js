@@ -6,7 +6,7 @@ const experienceSchema = new Schema({
     company: String,
     startDate: Date,
     endDate: Date,
-    responsibilities: String
+    description: String
 });
 
 const educationSchema = new Schema({

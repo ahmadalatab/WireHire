@@ -1,11 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Button, Modal, ModalHeader, ModalBody, Form, FormGroup, Label, Input } from 'reactstrap';
 import '../profile.scss';
 import { User } from '../shared/UserProfile';
 
-const About = () => {
+const About = (props) => {
 
     const aboutUser = User[0]['about'];
+
+    console.log(props.profile);
 
     const [modal, setModal] = useState(false);
     const [inputs, setInputs] = useState({});
@@ -23,15 +25,16 @@ const About = () => {
     }
 
     return (
-        aboutUser.map((info) => {
+        props.profile.map((info) => {
+            console.log(info);
             return (
-                <div className="info text-center" key={info.id}>
+                <div className="info text-center" key={info._id}>
                     <div className="align-items-center px-sm-2 py-2 mb-2 header">
                         <div>
-                            <h2>{info.firstName} {info.lastName}</h2>
+                            <h2>{info.firstname} {info.lastname}</h2>
                             <div>{info.email}</div>
-                            <div>{info.phoneNum}</div>
-                            <div>{info.location}</div>
+                            <div>{info.phoneNum || 'N/A'}</div>
+                            <div>{info.location || 'N/A'}</div>
                         </div>
                         <h2><i className="fa fa-pencil" onClick={toggle}></i></h2>
                     </div>

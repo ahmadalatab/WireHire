@@ -10,7 +10,7 @@ const ProfileModal = (props) => {
 
     return (
         <Modal isOpen={props.isOpen} toggle={props.toggle} centered={true}>
-            <ModalHeader toggle={props.toggle}>Edit</ModalHeader>
+            <ModalHeader>Edit</ModalHeader>
             <ModalBody>
                 <Form onSubmit={props.submit}>
                     {props.form}
@@ -26,7 +26,7 @@ const ProfileModal = (props) => {
 export const EducationModal = (props) => {
     return (
         <Modal isOpen={props.isOpen} toggle={props.toggle} centered={true}>
-            <ModalHeader toggle={props.toggle}>{props.action} Education</ModalHeader>
+            <ModalHeader>{props.action} Education</ModalHeader>
             <ModalBody>
                 <Form onSubmit={props.submit}>
                     <FormGroup>
@@ -50,7 +50,7 @@ export const EducationModal = (props) => {
                         </Row>
                     </FormGroup>
                     <FormGroup>
-                        <Label htmlFor="desc">GPA</Label>
+                        <Label htmlFor="gpa">GPA</Label>
                         <Input type="text" id="gpa" name="gpa" placeholder="GPA" defaultValue={props.gpa || ''} onChange={props.handleChange} />
                     </FormGroup>
                     <div className="text-center">
@@ -89,8 +89,8 @@ export const ExperienceModal = (props) => {
                         </Row>
                     </FormGroup>
                     <FormGroup>
-                        <Label htmlFor="desc">Description</Label>
-                        <Input type="textarea" id="desc" name="desc" placeholder="Description" defaultValue={props.responsibilites || ''} onChange={props.handleChange} />
+                        <Label htmlFor="description">Description</Label>
+                        <Input type="textarea" id="description" name="description" placeholder="Description" defaultValue={props.description || ''} onChange={props.handleChange} />
                     </FormGroup>
                     <div className="text-center">
                         <Button type="submit" color="primary">Save</Button>

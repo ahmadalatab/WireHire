@@ -3,6 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var cors = require('cors');
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
@@ -18,6 +19,7 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(cors());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
@@ -26,7 +28,7 @@ app.use('/profile', profileRouter);
 
 const mongoose = require('mongoose');
 
-const url = 'mongodb://localhost:27017/wirehiredb';
+const url = 'mongodb://localhost:27017/wirehire';
 const connect = mongoose.connect(url, {
   useCreateIndex: true,
   useFindAndModify: false,
